@@ -4,3 +4,8 @@ console.log(4+2,"addition by 2");
 console.log(4*2,"multiplied by 2");
 console.log(4/2,"divided by 2");
 console.log(4%2,"modulus by 2");
+let message ;
+message = "Hello snvs";
+console.log(message);
+let man;
+console.log(man);
