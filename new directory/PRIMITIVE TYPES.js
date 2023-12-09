@@ -6,7 +6,7 @@ console.log(typeof(b));
 <!-- here the number is the primitive type -->
 let boll = false;
 console.log(typeof(boll));
-console.log(typeof(true));
+console.log(true);
 <!-- here the boolean is the primitive type -->
 let name= "snvs";
 let name1 = 'snvs';
@@ -24,3 +24,13 @@ let obj= 12;
 obj = obj+1
 console.log(obj);
 console.log("the value of obj is "+obj);
+
+let snvs;
+snvs = 123123;
+console.log(snvs);
+if (snvs>15){
+    console.log("the value of a is greater than 15");
+}
+else{
+    console.log("the value of a is less than 15");
+}
