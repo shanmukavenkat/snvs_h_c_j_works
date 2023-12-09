@@ -20,3 +20,7 @@ console.log(age);
 console.log(typeof(age));
 <!-- here the undefined is the primitive type -->
 <!--here the value undefined and type is undefined-- by default it take the undefined as a value when not assigned any variable -->
+let obj= 12;
+obj = obj+1
+console.log(obj);
+console.log("the value of obj is "+obj);
