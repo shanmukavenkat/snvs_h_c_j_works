@@ -1,7 +1,7 @@
 <!--these onIncrement and other two are called as even-listeners -->
 
 let counterElement = document.getElementById("countValue");
-
+console.log(counterElement);
 function onIncrement() {
     let previousCounterValue = counterElement.textContent;
     let updatedCounterValue = parseInt(previousCounterValue) + 1;
