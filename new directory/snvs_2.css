@@ -1,0 +1,13 @@
+.card{
+    height:50px;
+    width: 80px;
+
+
+}
+.Para {
+    padding: 20px;
+    transition-property:transform ;
+    transition-duration:9s ;
+    transition-timing-function:ease-in;
+    transition-delay:30s;
+}
