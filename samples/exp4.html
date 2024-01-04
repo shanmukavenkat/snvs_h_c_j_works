@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exp4</title>
+    <style type="text/css">
+        #boxA,#boxB{
+            float: left; padding: 10px;margin:10px;
+
+        }
+        #boxA{
+            background-color:#30CFD0; width: 75px; height: 75px;
+        }
+        #boxB{
+            background-color:#38d9a9; width: 150px; height: 150px;
+        }
+
+    </style>
+</head>
+<body>
+<center>
+    <h2>Drag and Drop HTML5 demo</h2>
+    <div>Try to move the purple box into the pink box.</div>
+    <div id="boxA" draggable="true" ondragstart="return dragStart(event)"><p>Drag me!</p></div>
+    <div id="boxB" ondragenter="return dragEnter(event)" ondragover="return dragOver(event)" ondrop="return dragDrop(event)">Dustbin</div>
+</center>
+
+
+
+
+<script type="text/javascript">
+    function dragStart(ev){
+        ev.dataTransfer.effectAllowed='move';
+        ev.dataTransfer.setData("Text",ev.target.getAttribute('id'))
+        ev.dataTransfer.setDragImage(ev.target,0,0);
+        return true;
+    }
+    function dragEnter(ev){
+        event.preventDefault();
+        return true;
+    }
+    function dragOver(ev){
+        return false;
+    }
+    function dragDrop(ev){
+        var src=ev.dataTransfer.getData("text")
+    }
+    function dargDrop(ev){
+        var src=ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(src));
+        ev.stopPropagation();
+        return false;
+
+    }
+
+</script>
+</body>
+</html>
