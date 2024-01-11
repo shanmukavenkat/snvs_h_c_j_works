@@ -6,10 +6,10 @@ var arrayOfPersons = [
 ];
 
 // Iterate over the array and print the 'name' property for members with age > 18
-for (let person of arrayOfPersons) {
-    let personAge = person.age;
+for (let newPerson of arrayOfPersons) {
+    let personAge = newPerson.age;
     if (personAge > 18) {
-        let personName = person.name;
+        let personName = newPerson.name;
         console.log(personName);
     }
 }
