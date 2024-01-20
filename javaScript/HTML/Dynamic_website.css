@@ -1,0 +1,23 @@
+.bg-container{
+    background-color: #01444b;
+    padding:30px;
+    height: 100vh;
+}
+.heading{
+    font-family: "Roboto","sans-serif";
+    font-weight:500 ;
+    font-size:36px;
+    color:white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.list-container{
+    background-color:#ffffff;
+    border-radius: 6px;
+    padding: 30px 45px;
+}
+.delivery_text{
+    font-family: "Roboto","sans-serif";
+    font-size: 16px;
+    color:#ffffff;
+}

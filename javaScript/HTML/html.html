@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Html</title>
+</head>
+<body>
+
+<script>
+    let inputElement = document.createElement("input");
+    inputElement.type="checkbox";
+    inputElement.id="inputElement";
+ document.body.appendChild(inputElement);
+ let labelElement=document.createElement("label");
+    labelElement.htmlFor="inputElement";
+    labelElement.textContent="I am a label";
+    document.body.appendChild(labelElement);
+    let h1Element=document.createElement("h1");
+    h1Element.textContent="I am a h1";
+    document.body.appendChild(h1Element);
+</script>
+</body>
+</html>
