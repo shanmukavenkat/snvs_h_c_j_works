@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamically Add Buttons</title>
+</head>
+<body>
+<div id="button-container">
+    <!-- Existing Buttons will be appended here -->
+</div>
+<button id="add-button" onclick="addButton()">Add a Button</button>
+
+<script>
+    // Function to add a new button
+    function addButton() {
+        var button = document.createElement("button");
+        button.textContent = "New Button";
+        button.classList.add("btn", "btn-primary", "m-2");
+        document.getElementById("button-container").appendChild(button);
+    }
+</script>
+</body>
+</html>
