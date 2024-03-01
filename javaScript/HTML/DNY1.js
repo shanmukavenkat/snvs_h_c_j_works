@@ -16,7 +16,7 @@ let todoList = [
 ];
 
 addTodoButton.onclick = function(){
- onAddTodo()
+ onAddTodo();
 }
 function onTodoStatusChange(checkboxId,labelId){
     let checkboxElement = document.getElementById(checkboxId);

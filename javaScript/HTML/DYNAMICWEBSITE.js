@@ -26,7 +26,6 @@ for (let groceryItem of groceryItems){
     let listElement = document.createElement("li");
     listElement.textContent=groceryItem;
     unOrder_list.appendChild(listElement);
-
 }
 ///checkBox
 let checkBox = document.createElement("input");
