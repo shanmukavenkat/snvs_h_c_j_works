@@ -12,4 +12,4 @@ let bioData = {
 };
 let { fullName } = bioData;
 console.log(fullName);
-cpmsole.log(bioData);
+console.log(bioData);
