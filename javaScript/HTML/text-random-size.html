@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Cloud</title>
+</head>
+<body>
+<input type="text" id="userInput" placeholder="Enter a word">
+<button id="addBtn" onclick="onAddWordToWordCloud()">Add to Word Cloud</button>
+<p id="errorMsg"></p>
+
+<script>
+    let wordCloud = ["Hello", "hii", "how", "what", "you", "yourself", "name", "victory", "food", "lovely", "beautiful", "written", "where", "who", "awesome"];
+    let inputElement = document.getElementById("userInput");
+    let buttonElement = document.getElementById("addBtn");
+    let paraElement = document.getElementById("errorMsg");
+
+    function onAddWordToWordCloud() {
+        if (inputElement.value === "") {
+            alert("Please enter a word");
+        }else{
+            // Get a random font size
+            let fontSize = Math.random();
+            let newNumber = Math.ceil(fontSize * 40) + "px";
+
+            // Create a new span element
+            let spanElement = document.createElement("span");
+            spanElement.textContent = inputElement.value;
+            spanElement.style.fontSize = newNumber;
+
+            // Append the new span to the paragraph element
+            paraElement.appendChild(spanElement);
+
+            // Clear the input field
+            inputElement.value = "";
+            inputElement.textContent = "";
+        }
+
+
+    }
+</script>
+</body>
+</html>
