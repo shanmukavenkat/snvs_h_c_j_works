@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Key Code List</title>
+</head>
+<body>
+<input type="text" id="userInput" placeholder="Type something...">
+<ul id="KeyCodeList"></ul>
+
+<script>
+    // Get the input element and the UL element
+    let inputElement = document.getElementById('userInput');
+    let ulElement = document.getElementById("KeyCodeList");
+
+    // Add event listener to the input element
+    inputElement.addEventListener("keydown", function(event) {
+        // Create a new list item element
+        let liElement = document.createElement("li");
+
+        // Set the text content of the list item to the key code of the pressed key
+        liElement.textContent = event.keyCode;
+
+        // Append the new list item to the UL element
+        ulElement.appendChild(liElement);
+    });
+</script>
+</body>
+</html>
+{
