@@ -1,0 +1,14 @@
+Properties of methods
+______------>RESPONSE<------______--------->METHODS<------______
+--Response Object provides multiple properties to give more Information
+--about the response of the request.
+______------>RESPONSE<------______--------->METHODS<------______
+
+
+status(number)---->HTTP status code --200
+status(number, string) ----->status text as reported by the server
+headers --->server to client headers communication
+url
+text() ---> Getting text from the response
+json() ---> Parse the response as JSON
+
