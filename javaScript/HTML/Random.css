@@ -1,0 +1,28 @@
+.bg-container {
+    background-image: linear-gradient(to right, #a1ffce, #faffd1);
+    height: 100vh;
+}
+
+.get-activity-button {
+    color: #ffffff;
+    background-color: #6c8bd8;
+    font-size: 18px;
+    width: 150px;
+    border: none;
+    outline: none !important;
+    border-radius: 4px;
+}
+
+.activity-name {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.activity-type {
+    color: #63758b;
+    font-weight: bold;
+}
+
+.activity-img {
+    height: 250px;
+}
