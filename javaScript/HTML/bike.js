@@ -1,7 +1,9 @@
 let searchInput = document.getElementById("searchInput");
 let stackContainer = document.getElementById("searchResults");
+let loadingEle = document.getElementById("spinner");
 
 function displayResults(data) {
+
     let card = document.createElement("div");
     card.classList.add("card");
 
@@ -19,6 +21,7 @@ function displayResults(data) {
 
 searchInput.addEventListener("keydown", function () {
     let url = "https://apis.ccbp.in/city-bikes?bike_name=" + searchInput.value;
+    loadingEle.classList.toggle("d-none");
 
     let options = {
         method: "GET",
@@ -28,6 +31,7 @@ searchInput.addEventListener("keydown", function () {
         .then(function(response) {
             return response.json();
         })
+
         .then(function(jsonData) {
             console.log(jsonData);
             stackContainer.innerHTML = "";
