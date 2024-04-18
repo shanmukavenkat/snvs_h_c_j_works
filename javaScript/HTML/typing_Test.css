@@ -1,0 +1,51 @@
+.container-fluid {
+    background-image: linear-gradient(to left, #dac0ff, #f3eaff, #f2ebfe);
+}
+body{
+    background-image: linear-gradient(to left, #dac0ff, #f3eaff, #f2ebfe);
+
+}
+.card {
+    background-color: #f3eaff;
+    border-radius: 20px;
+}
+
+.para {
+    font-size: 20px;
+}
+
+.btn1 {
+    background-color: #690cb0;
+    color: #ffffff;
+}
+
+.paraOne {
+    font-size: 50px;
+}
+
+textarea {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+span {
+    font-size: 12px;
+}
+
+h1 {
+    color: #690cb0;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+p {
+    color: #3e4c59;
+}
+img{
+    width: 8%;
+    height: 8%;
+}
