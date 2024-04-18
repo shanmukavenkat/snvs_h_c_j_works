@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP_generator</title>
+</head>
+<body>
+<label for="otpInput">
+    Enter length of OTP:
+    <input type="text" id="otpInput"/>
+</label>
+<h1>OTP generator</h1>
+<button id="generateBtn">
+    Generate OTP
+</button>
+<p id="otpDisplay"></p>
+
+</body>
+<script>
+    let generateOTP = () =>{
+        let newValue = document.getElementById("otpInput").value;
+        const otpLength = parseInt(newValue);
+        const otp = Math.floor(100000 + Math.random() * (10 ** otpLength - 100000));
+        document.getElementById("otpDisplay").innerText = `${otp}`;
+    };
+    document.getElementById("generateBtn").addEventListener("click",generateOTP);
+</script>
+</html>
