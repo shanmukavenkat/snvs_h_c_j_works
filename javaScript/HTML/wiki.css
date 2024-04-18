@@ -36,6 +36,8 @@
 
 .result-title {
     font-size: 22px;
+    text-decoration: underline;
+    font-family: "Rockwell Extra Bold", "Rockwell", "Arial", sans-serif;
 }
 
 .link-description {
