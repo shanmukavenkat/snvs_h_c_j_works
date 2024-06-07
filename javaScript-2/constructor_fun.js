@@ -14,3 +14,4 @@ let Car2 = new NewCar("red","Toyota");
 console.log(Car2);
 let Car3 = new NewCar("green","Ford");
 console.log(Car3);
+Car1.start();
