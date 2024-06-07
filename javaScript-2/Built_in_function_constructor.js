@@ -25,3 +25,8 @@ console.log(car1);
 console.log(car1.prototype);//constructor :f(color,brand)
 console.log(Object.getPrototypeOf(car1));
 console.log(car2);
+///to know instance properties attributes
+console.log("To know instance properties attributes");
+console.log(Object.getOwnPropertyNames(car1));
+console.log(Object.getOwnPropertyNames(car2));
+console.log("Prototype inheritance");
