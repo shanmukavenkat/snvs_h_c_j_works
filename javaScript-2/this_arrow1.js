@@ -4,7 +4,7 @@ let car = {
     brand:"BMW",
     start:() =>{////method
         console.log(this);
-    }//first priority is given to the arrow function
+    }
 
 };
-car.start();
+car.start();///output window object
