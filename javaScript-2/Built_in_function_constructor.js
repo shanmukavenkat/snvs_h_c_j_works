@@ -8,7 +8,7 @@ let Car = new Function(
 );
 console.log(Car.prototype);//
 console.log("Above is the old way of creating a constructor function");
-function Car(color,brand){
+function WeCar(color,brand){
     this.color = color;
     this.brand = brand;
     this.start = function(){
@@ -17,3 +17,11 @@ function Car(color,brand){
 }
 console.log(Car.prototype);//
 console.log("Above is the new way of creating a constructor function");
+console.log(Object.getPrototypeOf(Car));
+
+let car1 = new Car("red","Toyota");
+let car2 = new Car("blue","Honda");
+console.log(car1);
+console.log(car1.prototype);//constructor :f(color,brand)
+console.log(Object.getPrototypeOf(car1));
+console.log(car2);
