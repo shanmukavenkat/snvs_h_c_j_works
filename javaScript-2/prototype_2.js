@@ -8,8 +8,10 @@ Person.prototype.fullName = function(){
 }
 let person1 = new Person("John", "Doe");
 let person2 = new Person("Virat", "Kohli");
+
 //console.log(Object.getPrototypeOf(person1));
 //console.log(person2);
+
 console.log(person1.fullName());
 console.log(Object.getPrototypeOf(person1) === Object.getPrototypeOf(person2));
 
