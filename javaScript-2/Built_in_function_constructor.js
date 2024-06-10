@@ -29,4 +29,4 @@ console.log(car2);
 console.log("To know instance properties attributes");
 console.log(Object.getOwnPropertyNames(car1));
 console.log(Object.getOwnPropertyNames(car2));
-console.log("Prototype inheritance");
+console.log("ProOtotype inheritance");
