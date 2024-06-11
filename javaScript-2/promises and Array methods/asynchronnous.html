@@ -5,17 +5,25 @@
     <title>Title</title>
 </head>
 <body>
-<h1>ASYNCHRONOUS</h1>
+<h1 id="newText">ASYNCHRONOUS</h1>
 </body>
 <script>
     const URL = "https://apis.ccbp.in/jokes/random";
+    let docEle = document.getElementById("newText");
 fetch(URL)
     .then((response)=>{
         return response.json();
+
     }).then((jsonData)=>{
         console.log(jsonData);
+        docEle.textContent = jsonData.value;
 });
 console.log("fetched data");
+
+const newURL = "https://apis.ccbp.in/jokes/random";
+const responseObject = fetch(newURL);
+console.log(responseObject);
+console.log("fetched done");
 
 </script>
 </html>
