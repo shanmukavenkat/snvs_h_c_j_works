@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>ASYNCHRONOUS</h1>
+</body>
+<script>
+    const URL = "https://apis.ccbp.in/jokes/random";
+fetch(URL)
+    .then((response)=>{
+        return response.json();
+    }).then((jsonData)=>{
+        console.log(jsonData);
+});
+console.log("fetched data");
+
+</script>
+</html>
