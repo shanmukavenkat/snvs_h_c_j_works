@@ -1,0 +1,50 @@
+.form{
+    width: 500px;
+    margin:0 auto;
+    margin-top: 150px;
+    background-color: #F6FBFF;
+}
+.form-item{
+    position:relative;
+    margin-bottom:15px;
+}
+.form-item input{
+    display:block;
+    width: 400px;
+    height: 40px;
+background: transparent;
+border:1px solid #ccc;
+transition: all .3s ease;
+padding:0 10px;
+}
+.form-item input:focus {
+    border-color: blue;
+    border-radius: 20px;
+
+}
+.form-item label{
+    position:absolute;
+    cursor:text;
+    z-index:2;
+    top:13px;
+    left:10px;
+    font-size:12px;
+    font-weight:bold;
+    background: #ffffff;
+    padding:0 10px;
+    color: #ffffff;
+    transition:all .3s ease;
+}
+.form-item input:focus +label,
+.form-item input:valid+label{
+    font-size: 11px;
+    top:-5px;
+
+}
+.form-item input:focus +label{
+    color: #000000;
+}
+input{
+    border: none;
+    outline: none; /* Remove the default focus outline (optional) */
+}
