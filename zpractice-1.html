@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{
+            width: 100px;
+            height: 50px;
+        }
+        button:hover{
+            background-color: #6f6fe3;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<h1>javaScript higherOrder Questions</h1>
+<button onclick="filterMethod()">Filter</button>
+<button onclick="reduceMethod()">Reduce</button>
+<button onclick="mapMethod()">Map</button>
+
+</body>
+<script>
+    const num = [1,2,3,4,5,6,7,8,9,10];
+
+    function result(title,value) {
+        alert(`${title}:${value}`);
+        document.body.innerHTML += `<p>${title}:${value}</p>`;
+
+    }
+
+    function filterMethod(){
+        result("Filtered Even Numbers:", num.filter(num => num%2 ===0));
+    }
+
+    function reduceMethod(){
+        result("Product of all Numbers:",num.reduce((x,y)=>x*y));
+
+    }
+
+    function mapMethod(){
+        result("squaredMethod:",num.map(num => num**2));
+    }
+
+
+</script>
+
+</html>

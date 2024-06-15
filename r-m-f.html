@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Higher Order Functions</h1>
+<button onclick="filterMethod()">FilterMethod</button>
+<button onclick="reduceMethod()">ReduceMethod</button>
+<button onclick="mapMethod()">mapMethod</button>
+
+</body>
+<script>
+    const numbers = [1,2,3,4,5,6,7,8,9,10];
+
+    function displayResult(title,result){
+        alert(`${title}:${result}`);
+        document.body.innerHTML += `<p>${title}:${result}</p>`;
+    }
+
+
+    function filterMethod(){
+        displayResult("Filtered Even Numbers",numbers.filter(num => num%2 ===0) );
+    }
+    function reduceMethod(){
+        displayResult("Product of all numbers",numbers.reduce((x,y)=>x*y));
+    }
+
+    function mapMethod(){
+        displayResult("Squared Methods", numbers.map(num => num**2));
+    }
+
+
+
+
+
+</script>
+</html>
