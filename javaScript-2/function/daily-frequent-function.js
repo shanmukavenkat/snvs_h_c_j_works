@@ -1,4 +1,4 @@
-const fruit = "apple";
+const fruit = "apple"
 const objectEntities = [
     {
         fruit: "apple",
