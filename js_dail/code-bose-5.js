@@ -8,3 +8,5 @@ function greet(name){
 }
 
 greet("John");
+
+//the function greet is hoisted to the top of the code
