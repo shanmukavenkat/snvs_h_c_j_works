@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        border: 10px solid goldenrod;
+    }
+    .container01{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border: 10px solid goldenrod;
+    }
+    .container02{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 10px solid goldenrod;
+        height: 100vh;
+
+    }
+    .container03{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        border: 10px solid goldenrod;
+        height: 100vh;
+    }
+    .container04{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 10px solid goldenrod;
+        height: 100vh;
+
+    }
+    .container05{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 10px solid goldenrod;
+        height: 100vh;
+    }
+    .container06{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        border: 10px solid goldenrod;
+        height: 100vh;
+    }
+    .container07{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 10px solid goldenrod;
+        height: 100vh;
+    }
+    .container08{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        border: 10px solid goldenrod;
+        height: 100vh;
+    }
+
+    .container09{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 10px solid goldenrod;
+        height: 100vh;
+    }
+    .container10{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 10px solid goldenrod;
+        height: 100vh;
+    }
+    .container11{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border: 10px solid goldenrod;
+        height: 100vh;
+    }
+    .container0{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        border: 10px solid goldenrod;
+    }
+    .container1 {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: 10px solid goldenrod;
+    }
+    .container2 {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        border: 10px solid goldenrod;
+    }
+    .container3 {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 10px solid goldenrod;
+    }
+    .container4 {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 10px solid goldenrod;
+    }
+    .box{
+        color: white;
+        font-size: 40px;
+        font-family: "Roboto",sans-serif;
+        text-align: center;
+        padding: 10px;
+    }
+    .box1{
+        background-color: skyblue;
+    }
+    .box2{
+        background-color: tomato;
+    }
+    .box3{
+        background-color: gold;
+    }
+    .box4{
+        background-color: forestgreen;
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container0">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container1">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container2">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container3">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container4">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+
+<div class="container01">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container02">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container03">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container04">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+
+<div class="container05">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container06">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container07">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container08">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+
+<div class="container09">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+
+
+<div class="container10">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+<div class="container11">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</div>
+
+
+
+
+
+</body>
+</html>
