@@ -6,4 +6,5 @@ function right(){
     return console.log("right");
 }
 
+/// || or && and
 left() || right();
