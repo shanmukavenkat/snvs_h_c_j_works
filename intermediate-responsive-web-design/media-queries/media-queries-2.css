@@ -1,0 +1,44 @@
+*body{
+    margin: 0;
+    padding: 0;
+}
+
+.bg-container{
+    height: 100vh;
+    width: 100%;
+}
+
+@media (width: 800px){
+    .bg-container{
+        background-color: #000000;
+    }
+}
+@media(max-width:799px){
+    .bg-container{
+        background-color: #8383ff;
+    }
+}
+
+@media(min-width:800px){
+    .bg-container{
+        background-color: #ff8383;
+
+    }
+}
+@media (height: 800px){
+    .bg-container{
+        background-color: #9bff8d;
+    }
+
+}
+
+@media(min-height:800px){
+    .bg-container{
+        background-color: #be75ff;
+    }
+}
+@media(max-height:799px){
+    .bg-container{
+        background-color: #fd8500;
+    }
+}

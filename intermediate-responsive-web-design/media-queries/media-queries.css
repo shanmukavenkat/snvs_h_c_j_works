@@ -1,0 +1,17 @@
+@media screen{
+    .heading{
+        color: blue;
+    }
+}
+
+@media print{
+    .heading{
+        color: green;
+    }
+}
+
+@media all{
+    .heading{
+        color:darkgoldenrod;
+    }
+}

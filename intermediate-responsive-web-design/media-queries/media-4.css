@@ -1,0 +1,33 @@
+.bg-container{
+    height:100vh;
+    width: 100%;
+}
+
+@media (orientation: landscape) and (min-width: 600px) {
+    .bg-container{
+        background-color: #fd8500;
+    }
+
+}
+
+@media screen and (min-width:800px) and (orientation: landscape){
+    .bg-container{
+        background-color: #ffd43b;
+    }
+}
+
+
+@media not screen and (min-width:700px){
+    .bg-container{
+        background-color: #dc3545;
+    }
+
+}
+
+@media screen , print,all {
+    h1{
+        display:ruby-text;
+
+    }
+
+}
