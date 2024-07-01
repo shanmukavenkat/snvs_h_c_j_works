@@ -1,0 +1,48 @@
+body{
+    margin:0;
+}
+
+
+.page-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+.page-navbar{
+    background-color: #2b5489;
+    font-family: Roboto,sans-serif;
+    color:#ffffff;
+    font-size: 20px;
+    padding:20px;
+}
+.page-footer{
+    background-color: #2b5489;
+    font-family: Roboto,sans-serif;
+    color:#ffffff;
+    font-size: 20px;
+    padding:20px;
+}
+
+.content{
+    background-color: lightblue;
+    font-family: "Roboto","serif";
+    font-size: 18px;
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y:scroll ;
+}
+.page-body{
+  display: flex;
+  flex-direction: row;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+.sidebar{
+    width:100px;
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    background-color: #2ecc71;
+    padding:20px;
+    flex-shrink: 0;
+}
