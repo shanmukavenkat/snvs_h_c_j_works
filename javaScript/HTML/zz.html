@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to String Converter</title>
+</head>
+<body>
+<h2>JSON to String Converter</h2>
+<textarea id="jsonInput" placeholder="Enter JSON code here"></textarea>
+<button onclick="convertToJsonString()">Convert</button>
+<div id="output"></div>
+
+<script>
+    function convertToJsonString() {
+        const jsonInput = document.getElementById('jsonInput').value;
+
+        try {
+            const jsonString = JSON.parse(jsonInput);
+            document.getElementById('output').textContent = JSON.stringify(jsonString);
+        } catch (error) {
+            document.getElementById('output').textContent = "Invalid JSON input!";
+        }
+    }
+</script>
+</body>
+</html>
