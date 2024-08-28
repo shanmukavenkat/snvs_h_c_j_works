@@ -1,0 +1,24 @@
+/* Extra Small devices (phones, Size < 576px) */
+@media only screen and (max-width: 575.98px) {
+    /* CSS rules for extra small devices */
+}
+
+/* Small devices (Size >= 576px) */
+@media only screen and (min-width: 576px) {
+    /* CSS rules for small devices */
+}
+
+/* Medium devices (Size >= 768px) */
+@media only screen and (min-width: 768px) {
+    /* CSS rules for medium devices */
+}
+
+/* Large devices (Size >= 992px) */
+@media only screen and (min-width: 992px) {
+    /* CSS rules for large devices */
+}
+
+/* Extra Large devices (Size >= 1200px) */
+@media only screen and (min-width: 1200px) {
+    /* CSS rules for extra large devices */
+}
