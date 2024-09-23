@@ -1,0 +1,12 @@
+.ai-container{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading{
+    color: white;
+   font-family: "Roboto",sans-serif;
+}

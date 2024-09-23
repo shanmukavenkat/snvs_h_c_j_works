@@ -1,0 +1,28 @@
+.table{
+    font-family: Roboto,sans-serif;
+    border: 1px solid #48abe0;
+    border-collapse: collapse;
+
+}
+td{
+    border: 1px solid #dac0ff;
+
+}
+th{
+    border: 1px solid #dac0ff;
+    color: #ffffff;
+    text-align: center;
+    background-color: #2b5489;
+    padding: 10px;
+
+}
+.even{
+    background-color: #d6ddf6;
+    color: black;
+    text-align: center;
+}
+.odd{
+    background-color: #c7c7f1;
+    color: black;
+    text-align: center;
+}

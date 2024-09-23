@@ -1,0 +1,12 @@
+.images-container {
+    text-align: center;
+    padding: 20px;
+}
+.cat-image {
+    width: 100%;
+    border: 2px solid #dddddd;
+    border-radius: 8px;
+}
+picture{
+    background-color: transparent;
+}
