@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+.main-container {
+    padding: 20px;
+}
+.section-heading {
+    margin: 0px;
+    margin-bottom: 15px;
+}
+.sub-heading {
+    margin: 0px;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+a {
+    text-decoration: none;
+}
+a:visited{
+    color: #ff0000;
+}
+a:hover{
+    text-decoration: underline;
+}
+.button {
+    font-family: "Roboto";
+    border: 1px solid darkviolet;
+    color: darkviolet;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 12px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.button:hover{
+    color:#ffffff;
+    background-color: darkviolet;
+}
+li:first-child{
+    color: green;
+    font-family: "Roboto",sans-serif;
+    font-weight: bold;
+}
+li:last-child{
+    color: #fd8500;
+}
+li:nth-child(4){
+    color: #6dff89;
+}
+.section-description::first-letter{
+    color: #fd8500;
+    font-family: Roboto sans-serif;
+    font-size: 50px;
+}
+.section-description::first-line{
+    color: #4b4bff;
+    font-family: Roboto sans-serif;
+
+}
+
+div p{
+    color: orangered;
+}
+
+div>p{
+    font-size: 32px;
+    color: #dac0ff;
+}
+
+h1~p{
+    color: #ffd43b;
+}
+
+a[target]{
+    background-color: #795e26;
+}
+h1[class^="section-heading"]{
+    background-color: #dc3545;
+}
+
+

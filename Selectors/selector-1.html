@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="selector-1.css">
+</head>
+<body>
+<div class="main-container">
+    <h1 class="section-heading">Machine Learning</h1>
+    <p class="section-description">
+        Machine learning (ML) is the study of computer
+        <a href="https://en.wikipedia.org/wiki/Algorithm" target="_blank"
+        >algorithms</a
+        >, and it is seen as a part of
+        <a
+                href="https://en.wikipedia.org/wiki/Artificial_intelligence"
+                target="_blank"
+        >artificial intelligence</a
+        >
+    </p>
+    <p>It is one of the fastest-emerging technologies in the world today.</p>
+    <h1 class="sub-heading">Applications of ML</h1>
+    <ul>
+        <li><p>Image Recognition</p></li>
+        <li><p>Speech Recognition</p></li>
+        <li><p>Traffic Prediction</p></li>
+        <li><p>Product Recommendations</p></li>
+        <li><p>Self-driving cars</p></li>
+        <li><p>Online Fraud Detection</p></li>
+    </ul>
+    <button class="button">Read More</button>
+</div>
+</body>
+</html>
+<!-- ///pseudo-classes///
+A pseudo-class is a keyword that allows us to select an element
+in its special state and style it
+//HOVER//
+The :hover pseudo class allows us to select and style and html
+element when the user hovers on it
+//:VISITED//
+The :visited class allows us to select and style all the visited links
+///:FIRST-CHILD :LAST-CHILD :NTH-CHILD()///
+These pseudo-classes allow us to select and style the desired
+child elements with in a parent element
+(2n) all even child's color and (3n)all the 3rc positions like 3,6,
+they get color
+(n) get all the child items color
+
+///pseudo-elements//
+A css pseudo-elements is a keyword that allows us to select
+the specific part of an element and style it
+for example:
+1. style the first letter of the paragraph
+2. style the first line of the paragraph
+
+syntax
+ selector::pseudo-selector{
+ p:value1
+ p:value2
+ }
+
+////combinators////
+CSS Combinators provides a way to combine two or more
+selectors and establish relationship between them
+
+syntax
+selector combinator selector {
+p:value1
+p:value2
+}
+
+///Child Combinators///
+The Child combinators (>) allows to select the style
+all the elements that are the children of a specified
+
+syntax
+selector > selector {
+p:value1
+p:value2
+}
+
+///Adjacent Sibling Combinator///
+The Adjacent Sibling Combinator(+)
+allows us to select and style the immediately next sibling
+of specified element
+
+syntax
+selector + selector {
+p:value1
+p:value2
+}
+
+///general Sibling Combinators///
+The General Sibling Combinator(~) allows
+to select all the next siblings of a specified
+element
+syntax
+selector ~ selector {
+p:value1
+p:value2
+}
+
+///Attribute Selector///
+The attribute selector is used to select
+elements with a specified attribute
+
+syntax
+[]{
+p:value1
+p:value2
+}
+
+[attribute=value] selects elements with a specified attribute and value
+[attribute~=value] selects elements with an attribute value containing a specified word
+[attribute^=value] selects elements whose attribute value string with a specified value
+-->
