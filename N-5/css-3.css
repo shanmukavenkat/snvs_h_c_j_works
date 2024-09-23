@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+.boxes-container{
+    height: 150vh;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:24px;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: Roboto,sans-serif;
+}
+.box1{
+    background-color: #1abc9c;
+
+
+}
+.box2{
+    background-color: #3498db;
+    position: fixed;
+    top:0px;
+    bottom: 0px;
+    left:0px;
+
+
+}
+.box3{
+    background-color: #a15bb3;
+}
+

@@ -1,0 +1,38 @@
+
+body {
+    margin: 0;
+}
+
+.boxes-container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box1 {
+    background-color: #1abc9c;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 {
+    background-color: #674ea7;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box3 {
+    background-color: #ff9900;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top:0;
+    left: 0;
+}

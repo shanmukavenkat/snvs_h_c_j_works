@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b6207faf77.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css-4.css" />
+</head>
+<body>
+<div class="bg-container">
+    <div class="nav-bar">
+        <div class="brand-logo-container">
+            <img
+                    src="https://res.cloudinary.com/dx94hnzfl/image/upload/v1613647140/Interior-room-gallery-furniture-logo-Graphics-4435674-1-removebg-preview_1_vcmr25.png"
+                    class="brand-logo"
+                    alt="reload"
+            />
+            <p class="brand-name">PRIMA</p>
+        </div>
+        <button class="logout-button">Log Out</button>
+    </div>
+    <div class="product-container">
+        <div class="product-details-and-image-container">
+            <div class="product-image-container">
+                <img
+                        src="https://res.cloudinary.com/dx94hnzfl/image/upload/v1613646778/sam-moqadam-kvmdsTrGOBM-unsplash-removebg-preview_1_1_clkztj.png"
+                        class="product-image"
+                        alt="reload"
+
+                />
+            </div>
+            <div class="product-details-container">
+                <h1 class="heading">URBAN LADDER CHAIRS</h1>
+                <p class="description">
+                    Urban Ladder Contour Chair & Ottoman Replica Engineered Wood Room
+                    Chair
+                </p>
+                <div class="select-color-container">
+                    <div class="label-and-selected-color-button-container">
+                        <p class="label">Select Color :</p>
+                        <button class="color-input" id="colorInput">
+                            <div class="selected-color"></div>
+                        </button>
+                    </div>
+                    <ul class="color-palette display-none" id="colorPalette">
+                        <li class="color bg-cement active-color">
+                            <i class="fa fa-check"></i>
+                        </li>
+                        <li class="color bg-brown"></li>
+                        <li class="color bg-blue"></li>
+                        <li class="color bg-navy"></li>
+                    </ul>
+                </div>
+                <div class="price-container">
+                    <p class="discount-price">Rs. 2999.00</p>
+                    <p class="actual-price">Rs. 4999.00</p>
+                </div>
+                <button class="buy-now-button" id="buyNowButton">Buy Now</button>
+            </div>
+        </div>
+        <div class="modal-container display-none" id="modalContainer">
+            <div class="payment-card">
+                <div class="payment-card-header">
+                    <h1 class="payment-heading">Payment Method</h1>
+                    <i class="fa fa-times close-button" id="closeButton"></i>
+                </div>
+                <div class="payment-card-body">
+                    <div class="payment-option-container">
+                        <div class="payment-option-image-container">
+                            <img
+                                    src="https://res.cloudinary.com/dx94hnzfl/image/upload/v1613360670/Vector_petsvk.png"
+                                    class="payment-option-image"
+                                    alt="reload"
+
+                            />
+                        </div>
+                        <p class="payment-option-name">Visa Card</p>
+                    </div>
+                    <div class="payment-option-container">
+                        <div class="payment-option-image-container">
+                            <img
+                                    src="https://res.cloudinary.com/dx94hnzfl/image/upload/v1613362757/Group_1291_wygcpi.png"
+                                    class="payment-option-image"
+                                    alt="reload"
+
+                            />
+                        </div>
+                        <p class="payment-option-name active-payment-option">
+                            Master Card
+                        </p>
+                    </div>
+                    <div class="payment-option-container">
+                        <div class="payment-option-image-container">
+                            <img
+                                    src="https://res.cloudinary.com/dx94hnzfl/image/upload/v1613360670/Vector_1_kbrf9s.png"
+                                    class="payment-option-image"
+                                    alt="reload"
+
+                            />
+                        </div>
+                        <p class="payment-option-name">Paypal</p>
+                    </div>
+                    <div class="payment-option-container">
+                        <div class="payment-option-image-container">
+                            <img
+                                    src="https://res.cloudinary.com/dx94hnzfl/image/upload/v1613362757/voucher_dqnhjn.png"
+                                    class="payment-option-image"
+                                    alt="reload"
+
+                            />
+                        </div>
+                        <p class="payment-option-name">Voucher</p>
+                    </div>
+                </div>
+                <div class="payment-card-footer">
+                    <button class="next-step-button">NEXT STEP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wcu-section-container">
+        <div class="wcu-description-and-services-container">
+            <h2 class="wcu-section-heading">Why choose Us ?</h2>
+            <p class="wcu-section-description">
+                We are here to provide you with exceptional customer service
+                whenever you need us. We're dedicated to giving you the best
+            </p>
+            <div class="services-container">
+                <div class="service">
+                    <img
+                            class="service-icon"
+                            src="https://res.cloudinary.com/dktrtclrt/image/upload/q_auto:best/v1713763444/HTMLCSS/free_delivery_rzb2t3.png"
+                            alt="service"
+                    />
+                    <p class="service-title">Fast & Free Delivery</p>
+                    <p class="service-description">
+                        Free delivery on first order (the "Offer") applies to the Free
+                        Delivery option
+                    </p>
+                </div>
+                <div class="service">
+                    <img
+                            class="service-icon"
+                            src="https://res.cloudinary.com/dktrtclrt/image/upload/q_auto:best/v1713763443/HTMLCSS/free-installation_ft73cr.png"
+                            alt="service"
+                    />
+                    <p class="service-title">Free Installation</p>
+                    <p class="service-description">
+                        We also provide free installation offers, which will also be
+                        mentioned on the same page
+                    </p>
+                </div>
+                <div class="service">
+                    <img
+                            class="service-icon"
+                            src="https://res.cloudinary.com/dktrtclrt/image/upload/q_auto:best/v1713763443/HTMLCSS/online_support_t9vfv2.png"
+                            alt="service"
+                    />
+                    <p class="service-title">Online Support 24/7</p>
+                    <p class="service-description">
+                        Our Online Support will provide you with many useful functions,
+                        valuable information, tips
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    const buyNowButtonEl = document.getElementById("buyNowButton");
+    const closePaymentEl = document.getElementById("closeButton");
+    const colorInputEl = document.getElementById("colorInput");
+    const colorPaletteEl = document.getElementById("colorPalette");
+    const modalContainerEl = document.getElementById("modalContainer");
+
+    const toggleModal = () => {
+        modalContainerEl.classList.toggle("display-none");
+    };
+
+    const toggleColorsContainer = () => {
+        colorPaletteEl.classList.toggle("display-none");
+    };
+
+    buyNowButtonEl.addEventListener("click", toggleModal);
+    closePaymentEl.addEventListener("click", toggleModal);
+    colorInputEl.addEventListener("click", toggleColorsContainer);
+
+</script>
+</html>
