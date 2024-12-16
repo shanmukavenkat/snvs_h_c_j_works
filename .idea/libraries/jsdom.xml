@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jsdom" type="javaScript">
+    <CLASSES />
+    <DOCUMENTATION>
+      <root url="https://github.com/jsdom/jsdom" />
+    </DOCUMENTATION>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

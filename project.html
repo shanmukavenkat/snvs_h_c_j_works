@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Project Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/b6207faf77.js" crossorigin="anonymous"></script> <!-- FontAwesome Script -->
+    <style>
+        nav {
+            background-color: #f0806c;
+        }
+        .icon-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color:#f0806c; /* Red background for delete */
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<!-- SNVS__KOMAL__Navbar -->
+<nav class=" p-4 flex justify-between items-center">
+    <div class="flex items-center">
+        <!-- SNVS__KOMAL__College Logo -->
+        <img src="VVIT_logo.svg" alt="College Logo" class="w-12  mr-2">
+        <!-- SNVS__KOMAL__College Name -->
+        <h1 class="text-white text-xl font-semibold">My College</h1>
+    </div>
+    <!-- SNVS__KOMAL__Add Class Button -->
+    <button id="addClassBtn" class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-blue-200">Add Class</button>
+</nav>
+
+<!-- SNVS__KOMAL__Main Content -->
+<div class="container mx-auto p-4">
+    <!-- SNVS__KOMAL__Add Class Form -->
+    <div id="classForm" class="hidden bg-white p-4 rounded shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Add a New Class</h2>
+        <label for="className" class="block mb-2">Class Name:</label>
+        <input type="text" id="className" class="border p-2 mb-4 w-full" placeholder="Enter class name">
+        <label for="batchCount" class="block mb-2">Number of Batches:</label>
+        <input type="number" id="batchCount" class="border p-2 mb-4 w-full" placeholder="Enter number of batches">
+        <button id="saveClassBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Save Class</button>
+    </div>
+
+    <!-- SNVS__KOMAL__Class Selection Dropdown -->
+    <div class="mt-8">
+        <label for="classSelect" class="block mb-2">Select a Class:</label>
+        <select id="classSelect" class="border p-2 w-full">
+            <option value="">-- Select a class --</option>
+        </select>
+        <button id="deleteClassBtn" class="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Delete Class</button>
+    </div>
+
+    <!-- SNVS__KOMAL__Display Batches -->
+    <div id="batchesContainer" class="mt-8 hidden bg-white p-4 rounded shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Batches for the selected class</h2>
+        <button id="addBatchBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 mb-4">Add Batch</button>
+        <!-- SNVS__KOMAL__Dynamic batch content goes here -->
+    </div>
+</div>
+
+<script>
+    const addClassBtn = document.getElementById('addClassBtn');
+    const classForm = document.getElementById('classForm');
+    const saveClassBtn = document.getElementById('saveClassBtn');
+    const classSelect = document.getElementById('classSelect');
+    const batchesContainer = document.getElementById('batchesContainer');
+    const addBatchBtn = document.getElementById('addBatchBtn');
+    const deleteClassBtn = document.getElementById('deleteClassBtn');
+
+    // Show/Hide Add Class Form
+    addClassBtn.addEventListener('click', () => {
+        classForm.classList.toggle('hidden');
+    });
+
+    // Retrieve saved classes from localStorage on load
+    window.onload = function () {
+        displayStoredClassesInDropdown();
+    };
+
+    // Save Class Functionality
+    saveClassBtn.addEventListener('click', () => {
+        const className = document.getElementById('className').value;
+        const batchCount = document.getElementById('batchCount').value;
+
+        if (className && batchCount > 0) {
+            const newClass = {
+                className: className,
+                batches: Array.from({ length: batchCount }, (_, i) => ({
+                    batchName: `Batch ${i + 1}`,
+                    projectName: '',
+                    projectLink: ''
+                }))
+            };
+
+            let storedClasses = JSON.parse(localStorage.getItem('classes')) || [];
+            storedClasses.push(newClass);
+            localStorage.setItem('classes', JSON.stringify(storedClasses));
+            displayStoredClassesInDropdown();
+
+            classForm.classList.add('hidden');
+            document.getElementById('className').value = '';
+            document.getElementById('batchCount').value = '';
+        } else {
+            alert('Please fill in all the fields');
+        }
+    });
+
+    // Function to display stored classes in the dropdown
+    function displayStoredClassesInDropdown() {
+        classSelect.innerHTML = '<option value="">-- Select a class --</option>';
+        const storedClasses = JSON.parse(localStorage.getItem('classes')) || [];
+
+        storedClasses.forEach((storedClass, classIndex) => {
+            const option = document.createElement('option');
+            option.value = classIndex;
+            option.textContent = storedClass.className;
+            classSelect.appendChild(option);
+        });
+    }
+
+    // Listen for class selection from dropdown
+    classSelect.addEventListener('change', (event) => {
+        const selectedClassIndex = event.target.value;
+        if (selectedClassIndex) {
+            displayBatchesForSelectedClass(selectedClassIndex);
+            batchesContainer.classList.remove('hidden');
+        } else {
+            batchesContainer.classList.add('hidden');
+        }
+    });
+
+    // Function to display batches of the selected class
+    function displayBatchesForSelectedClass(classIndex) {
+        batchesContainer.innerHTML = `<h2 class="text-xl font-semibold mb-4">Batches for the selected class</h2>
+            <button id="addBatchBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 mb-4">Add Batch</button>`;
+
+        const storedClasses = JSON.parse(localStorage.getItem('classes')) || [];
+        const selectedClass = storedClasses[classIndex];
+
+        selectedClass.batches.forEach((batch, batchIndex) => {
+            const batchDiv = document.createElement('div');
+            batchDiv.classList.add('batch', 'mb-4');
+            batchDiv.innerHTML = `
+                    <h5 class="font-medium">${batch.batchName}</h5>
+                    <input type="text" class="projectName border p-2 w-full mb-2" placeholder="Project Name" value="${batch.projectName}">
+                    <input type="text" class="projectLink border p-2 w-full mb-2" placeholder="Project Link" value="${batch.projectLink}">
+                    <button class="icon-btn" onclick="saveBatch(${classIndex}, ${batchIndex})"><i class="fas fa-save"></i></button>
+                    <button class="icon-btn" onclick="deleteBatch(${classIndex}, ${batchIndex})"><i class="fas fa-trash"></i></button>
+                `;
+            batchesContainer.appendChild(batchDiv);
+        });
+
+        // Re-add event listener for adding a new batch
+        document.getElementById('addBatchBtn').addEventListener('click', () => {
+            addNewBatch(classIndex);
+        });
+    }
+
+    // Function to save batch data
+    function saveBatch(classIndex, batchIndex) {
+        const projectNameInput = document.querySelectorAll('.batch')[batchIndex].querySelector('.projectName').value;
+        const projectLinkInput = document.querySelectorAll('.batch')[batchIndex].querySelector('.projectLink').value;
+
+        let storedClasses = JSON.parse(localStorage.getItem('classes'));
+        storedClasses[classIndex].batches[batchIndex].projectName = projectNameInput;
+        storedClasses[classIndex].batches[batchIndex].projectLink = projectLinkInput;
+
+        localStorage.setItem('classes', JSON.stringify(storedClasses));
+        alert('Batch project details saved successfully!');
+    }
+
+    // Function to delete a batch
+    function deleteBatch(classIndex, batchIndex) {
+        let storedClasses = JSON.parse(localStorage.getItem('classes'));
+        storedClasses[classIndex].batches.splice(batchIndex, 1);
+        localStorage.setItem('classes', JSON.stringify(storedClasses));
+        displayBatchesForSelectedClass(classIndex);
+        alert('Batch deleted successfully!');
+    }
+
+    // Function to add a new batch to the selected class
+    function addNewBatch(classIndex) {
+        let storedClasses = JSON.parse(localStorage.getItem('classes'));
+        storedClasses[classIndex].batches.push({
+            batchName: `Batch ${storedClasses[classIndex].batches.length + 1}`,
+            projectName: '',
+            projectLink: ''
+        });
+        localStorage.setItem('classes', JSON.stringify(storedClasses));
+        displayBatchesForSelectedClass(classIndex);
+        alert('New batch added successfully!');
+    }
+
+    // Function to delete the selected class
+    deleteClassBtn.addEventListener('click', () => {
+        const selectedClassIndex = classSelect.value;
+        if (selectedClassIndex !== '') {
+            let storedClasses = JSON.parse(localStorage.getItem('classes'));
+            storedClasses.splice(selectedClassIndex, 1);
+            localStorage.setItem('classes', JSON.stringify(storedClasses));
+            displayStoredClassesInDropdown();
+            batchesContainer.classList.add('hidden');
+            alert('Class deleted successfully!');
+        } else {
+            alert('Please select a class to delete.');
+        }
+    });
+</script>
+</body>
+</html>

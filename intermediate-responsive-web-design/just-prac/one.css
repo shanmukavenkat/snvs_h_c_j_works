@@ -1,0 +1,28 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #F6FBFF;
+}
+.s-container{
+    margin-top: 100px;
+    position: relative;
+}
+.s-container input{
+    width: 350px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: #dac0ff;
+}
+.s-container i{
+    position: absolute;
+    top:50%;
+    right: 20px;
+    transform:translateY(-50%);
+}

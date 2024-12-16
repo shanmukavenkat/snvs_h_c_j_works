@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jquery-1.9.1" level="application" />
+    <orderEntry type="library" name="jsdom" level="project" />
+    <orderEntry type="library" name="domino" level="project" />
+    <orderEntry type="library" name="jsdom-global" level="project" />
+    <orderEntry type="library" name="5f59ca6ad3" level="application" />
+    <orderEntry type="library" name="5f59ca6ad3" level="application" />
+    <orderEntry type="library" name="popper.js" level="application" />
+    <orderEntry type="library" name="jquery-3.5.1.slim" level="application" />
+    <orderEntry type="library" name="ac42c3b1f7" level="application" />
+    <orderEntry type="library" name="qrcode" level="application" />
+    <orderEntry type="library" name="b6207faf77" level="application" />
+    <orderEntry type="library" name="b6207faf77" level="application" />
+    <orderEntry type="library" name="b6207faf77" level="application" />
+  </component>
+</module>

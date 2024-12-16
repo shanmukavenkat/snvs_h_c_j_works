@@ -12,3 +12,23 @@ url
 text() ---> Getting text from the response
 json() ---> Parse the response as JSON
 
+let options = {
+    method:"GET"
+}
+
+-----------------------------------<<<<<---------->>>>>---------------------------------------
+let url = "https://gorest.co.in/public-api/users";
+fetch(url,options)
+.then(function(response){
+    paraStatus.textContent = response.status;
+    return response.text();
+})
+.then(function(text){
+    responseEl.textContent = text;
+    console.log(text);
+})
+
+
+
+
+
