@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food List</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+</head>
+<body>
+
+<div id="food-list-container">
+    <input class="search" placeholder="Search food...">
+        <button class="sort" data-sort="name">Sort by Name</button>
+        <button class="sort" data-sort="category">Sort by Category</button>
+
+        <ul class="list">
+            <li>
+                <span class="name">Pizza</span> -
+                <span class="category">Fast Food</span> -
+                <span class="price">$10</span>
+            </li>
+            <li>
+                <span class="name">Burger</span> -
+                <span class="category">Fast Food</span> -
+                <span class="price">$5</span>
+            </li>
+        </ul>
+</div>
+
+<script>
+    const options = {
+    valueNames: ['name', 'category', 'price']
+};
+
+    const foodList = new List('food-list-container', options);
+</script>
+
+</body>
+</html>
