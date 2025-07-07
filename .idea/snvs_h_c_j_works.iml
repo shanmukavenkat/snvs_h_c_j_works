@@ -21,5 +21,7 @@
     <orderEntry type="library" name="b6207faf77" level="application" />
     <orderEntry type="library" name="b6207faf77" level="application" />
     <orderEntry type="library" name="b6207faf77" level="application" />
+    <orderEntry type="library" name="@tailwindcss" level="application" />
+    <orderEntry type="library" name="list.js" level="application" />
   </component>
 </module>

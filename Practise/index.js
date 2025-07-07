@@ -58,7 +58,9 @@ window.setInterval(()=>{
 // to manage the entire content we are using the javascript functions
 // to create the elements dynamically
 //------>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-// Reconciliation
+// Reconciliation React Reconciliation refers to React’s process of comparing the current and previous states of the Virtual DOM and updating the DOM efficiently
+// for example when you open the instagram and you see the feed that which is changing dynamically and data is coming from the backend
+// ___________________________________________________
 // the react also do the same thing and do it in the more efficient way
 // state ==> if there is any change the react will make the dom elements operations
 // and it will create the elements
