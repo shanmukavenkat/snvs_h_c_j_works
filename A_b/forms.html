@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms</title>
+</head>
+<body>
+<form action="index.php" method="POST" enctype="multipart/form-data">
+    <label for="username">
+        username
+        <input type="text" id="username" name = "username " placeholder="username" minlength="10" required/>
+    </label>
+    <br>
+
+    <label for="password">
+        password
+        <input type="password" id="password" name="password" placeholder="password" required/>
+    </label>
+    <br>
+
+    <label>
+        email
+        <input type="email" name="email" placeholder="email" required/>
+    </label>
+    <br>
+
+    <label for="phonenumber">
+        <input type="tel" id="phonenumber" name="phone number" placeholder="phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+
+    </label>
+    <br>
+
+    <label for="age">
+        age
+        <input type="number" id="age" name ="age" placeholder="age" min="1" max="100" required/>
+    </label>
+    <br>
+
+    <label for="quantity">
+        quantity
+        <input type="number" id="quantity" name="quantity" placeholder="quantity" min="1" max="5"/>
+
+    </label>
+    <br>
+    <label>
+    <input type="date" />
+    </label>
+    <br>
+    <label for="title">
+    <input type="radio" id="title" name="title" value="Mr" checked/>
+    Mr
+    </label>
+    <label for="title">
+    <input type="radio" id="title" name="title" value="Ms"/>
+    Ms
+    </label>
+    <label for="title">
+    <input type="radio" id="title" name="title" value="Mrs"/>
+    Mrs
+    </label>
+    <br>
+    <label for="payement">
+        <select>
+            <option value="credit card" id="payement">credit card</option>
+
+            <option value="debit card" id="payement">debit card</option>
+            <option value="paypal" id="payement">paypal</option>
+            <option value="upi" id="payement">upi</option>
+        </select>
+    </label>
+    <br>
+    <label for="checkbox">
+        <input type="checkbox" id="checkbox" name="checkbox" required/>
+        i agree to the terms and conditions
+        <input type="checkbox" id="checkbox" name="checkbox" required/>
+    </label>
+    <br>
+    <label>
+       <textarea  name="textarea" placeholder="your address here" rows="4" cols="50">
+       </textarea>
+    </label>
+    <br>
+    <label for="file">
+        upload your file
+        <input type="file" id="file" name="file" accept=".jpg, .png, .pdf, .html, .css, .js,"/>
+    </label>
+    <input type="reset"/>
+    <br>
+    <input type="submit" />
+
+</form>
+</body>
+</html>
